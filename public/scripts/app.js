@@ -25,6 +25,8 @@ var onClickRemoveAll = function onClickRemoveAll() {
     renderIndecisionApp();
 };
 
+var numbers = [55, 101, 1000];
+
 var renderIndecisionApp = function renderIndecisionApp() {
     var template = React.createElement(
         'div',
@@ -57,16 +59,13 @@ var renderIndecisionApp = function renderIndecisionApp() {
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Item One'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Item Two'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',
