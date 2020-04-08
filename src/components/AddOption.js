@@ -1,14 +1,14 @@
 import React from 'react';
 
 export default class AddOption extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.state = {
-            error: undefined,
-        }
-    }
-    handleFormSubmit(event) {
+    state = {
+        error: undefined
+    };
+    // constructor(props) {
+    //     super(props);
+    //     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    // }
+    handleFormSubmit = (event) => {
         event.preventDefault();
         console.log('testing');
         const formInput = event.target.elements.option.value.trim();
@@ -19,7 +19,7 @@ export default class AddOption extends React.Component {
         if(!error) {
             event.target.elements.option.value = '';
         }
-    }
+    };
 
     render() {
         return (
