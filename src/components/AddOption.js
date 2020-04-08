@@ -10,6 +10,7 @@ export default class AddOption extends React.Component {
     }
     handleFormSubmit(event) {
         event.preventDefault();
+        console.log('testing');
         const formInput = event.target.elements.option.value.trim();
         const error = this.props.handleAddOption(formInput);
         
