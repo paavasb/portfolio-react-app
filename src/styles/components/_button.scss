@@ -15,6 +15,12 @@
     opacity: .5;
 }
 
+@media (max-width: $desktop-rem) {
+    .big-button {
+        margin-bottom: $m-size;
+    }
+}
+
 //Button
 .button {
     background: $purple;
@@ -31,3 +37,4 @@
     color: $off-white;
     padding: 0;
 }
+
